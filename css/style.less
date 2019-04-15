@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+//-----LESS:    width: ~"calc(50% - 20px)";
+//-----CSS:    width: calc(50% - 20px);
+
+//--- variables
+// @colorA: ;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+img,object,embed,canvas,video,audio,picture,svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.center-fuild {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+// ------------------- Header
+
+header {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-attachement: ;*/
+
+}
+
+div.top {
+    nav.menu {
+        background-color: #000;
+        a.btn {
+            display: none;
+        }
+        ul {
+            display: flex;
+            li {
+                width: 25%;
+                &:hover {
+                    background-color: orangered;
+                }
+                a {
+                    font-size: 30px;
+                    line-height: 100px;
+                    color: #fff;
+                    display: block;
+
+                }
+            }
+        }
+    }
+}
+
+
+/* ------------------------ MEDIA QUERIES 960px ---- */
+
+@media screen and (max-width: 500px) {
+    .center {
+        width: 100%;
+        margin: 0;
+    }
+    div.top {
+        nav.menu {
+            background-color: #000;
+            a.btn {
+                display: block;
+                i.fas {
+                    width: 100%;
+                    font-size: 50px;
+                    color: red;
+                    line-height: 100px;
+                    transition: 0.5s;
+                }
+                .isopen {
+                    transform: rotate(90deg);
+                    transition: 0.5s;
+                    color: blue !important;
+                }
+
+
+
+            }
+            ul {
+                flex-direction: column;
+                display: none;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
