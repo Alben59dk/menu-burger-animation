@@ -1,11 +1,11 @@
 $(document).ready(function(){
-    $("a.btn").click(function(){
-        $("ul").slideToggle()
+    $('.toggle').click(function(){
+        $(this).toggleClass('active')
+        $('nav.menu').toggleClass('isopen')
         return(false)
     })
-
-    $('a.btn').click(function(){
-        $('i').toggleClass('isopen')
+    $('nav.menu ul li a').click(function(){
+        $('nav.menu').removeClass('isopen')
         return(false)
     })
 })

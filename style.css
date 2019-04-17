@@ -1,0 +1,142 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-style: normal;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+img,
+object,
+embed,
+canvas,
+video,
+audio,
+picture,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+.center {
+  width: 960px;
+  margin: 0 auto;
+}
+.center-fuild {
+  width: 1400px;
+  margin: 0 auto;
+}
+body {
+  text-align: center;
+  background-color: salmon;
+}
+.clear {
+  clear: both;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+div.toggle {
+  position: absolute;
+  z-index: 999;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  border: solid 1px #fff;
+  border-radius: 5px;
+}
+div.toggle.active span:nth-child(1) {
+  transform: translate(-50%, -50%) translateY(-15px);
+  opacity: 0;
+}
+div.toggle.active span:nth-child(4) {
+  transform: translate(-50%, -50%) translateY(15px);
+  opacity: 0;
+}
+div.toggle.active span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition-delay: 0.2s;
+}
+div.toggle.active span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition-delay: 0.2s;
+}
+div.toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: .5s;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+div.toggle span:nth-child(1) {
+  transform: translate(-50%, -50%) translateY(-10px);
+  transition: .2s;
+}
+div.toggle span:nth-child(4) {
+  transform: translate(-50%, -50%) translateY(10px);
+  transition: .2s;
+}
+nav.menu {
+  height: 100vh;
+  background-color: black;
+  width: 0;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  position: fixed;
+  top: 0;
+  left: -50px;
+  transition: all .5s;
+}
+nav.menu.isopen {
+  left: 0;
+  width: 300px;
+  display: block;
+  transition: all .5s;
+}
+nav.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+nav.menu ul li {
+  display: block;
+  width: 100%;
+}
+nav.menu ul li a {
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+/* ------------------------ MEDIA QUERIES 960px ---- */
+@media screen and (max-width: 960px) {
+  .center {
+    width: 100%;
+    margin: 0;
+  }
+}
